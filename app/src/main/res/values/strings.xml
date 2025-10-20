@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">Calculator</string>
+    <string name="calculator_title">Calculator</string>
+    <string name="button_0">0</string>
+    <string name="button_1">1</string>
+    <string name="button_2">2</string>
+    <string name="button_3">3</string>
+    <string name="button_4">4</string>
+    <string name="button_5">5</string>
+    <string name="button_6">6</string>
+    <string name="button_7">7</string>
+    <string name="button_8">8</string>
+    <string name="button_9">9</string>
+    <string name="button_plus">+</string>
+    <string name="button_minus">-</string>
+    <string name="button_multiply">×</string>
+    <string name="button_divide">÷</string>
+    <string name="button_equals">=</string>
+    <string name="button_clear">C</string>
+    <string name="button_delete">⌫</string>
+    <string name="button_dot">.</string>
+    <string name="button_parentheses">()</string>
+    <string name="calculation_error">Error</string>
+    <string name="empty_expression">Enter expression</string>
+    
+    <string name="weather_title">Weather</string>
+    <string name="weather_detail_title">Weather Details</string>
+    <string name="city_name">Moscow</string>
+    <string name="temperature_unit">°C</string>
+    <string name="mmhg_unit">мм рт. ст.</string>
+    <string name="kmh_unit">км/ч</string>
+    <string name="km_unit">км</string>
+    <string name="humidity">Влажность</string>
+    <string name="pressure">Давление</string>
+    <string name="wind_speed">Скорость ветра</string>
+    <string name="visibility">Видимость</string>
+    <string name="uv_index">УФ индекс</string>
+    <string name="loading_weather">Загрузка погоды...</string>
+    <string name="error_loading_weather">Ошибка загрузки погоды</string>
+    <string name="retry">Повторить</string>
+</resources>

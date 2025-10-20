@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/weatherCard"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/weather_card_height"
+    android:layout_margin="@dimen/weather_card_margin"
+    app:cardCornerRadius="@dimen/weather_card_corner_radius"
+    app:cardElevation="@dimen/weather_card_elevation"
+    app:cardBackgroundColor="@color/weather_card_bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="97dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/weather_card_padding">
+
+        <LinearLayout
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/dayTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/weather_title"
+                android:textColor="@color/weather_text_primary"
+                android:textSize="@dimen/weather_text_primary"
+                android:textStyle="bold"
+                tools:text="Сегодня" />
+
+            <TextView
+                android:id="@+id/dateTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/weather_spacing_small"
+                android:textColor="@color/weather_text_secondary"
+                android:textSize="@dimen/weather_text_caption"
+                tools:text="15 дек" />
+
+            <TextView
+                android:id="@+id/conditionTextView"
+                android:layout_width="91dp"
+                android:layout_height="wrap_content"
+                android:maxLines="2"
+                android:textColor="@color/weather_text_secondary"
+                android:textSize="@dimen/weather_text_secondary"
+                tools:text="Облачно" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/weatherIconImageView"
+            android:layout_width="@dimen/weather_icon_large"
+            android:layout_height="@dimen/weather_icon_large"
+            android:layout_marginHorizontal="@dimen/weather_spacing_medium"
+            android:scaleType="centerInside"
+            tools:src="@drawable/ic_launcher_foreground" />
+
+        <LinearLayout
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/maxTempTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/temperature_unit"
+                    android:textColor="@color/weather_text_primary"
+                    android:textSize="@dimen/weather_temperature_large"
+                    android:textStyle="bold"
+                    tools:text="25°" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/weather_spacing_small"
+                    android:text="@string/temperature_unit"
+                    android:textColor="@color/weather_text_secondary"
+                    android:textSize="@dimen/weather_text_secondary"
+                    tools:text="°C" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/weather_spacing_small"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/minTempTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/temperature_unit"
+                    android:textColor="@color/weather_text_secondary"
+                    android:textSize="@dimen/weather_temperature_small"
+                    tools:text="15°" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/weather_spacing_small"
+                    android:text="@string/temperature_unit"
+                    android:textColor="@color/weather_text_secondary"
+                    android:textSize="@dimen/weather_text_caption"
+                    tools:text="°C" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

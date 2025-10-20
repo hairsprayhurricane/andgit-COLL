@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".weather.presentation.ui.WeatherActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/weather_cool"
+            app:title="@string/weather_title"
+            app:titleTextColor="@color/white"
+            app:navigationIcon="@drawable/ic_arrow_back" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/currentWeatherCard"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/weather_header_height"
+                android:layout_margin="@dimen/weather_spacing_medium"
+                app:cardCornerRadius="@dimen/weather_card_corner_radius"
+                app:cardElevation="@dimen/weather_card_elevation"
+                app:cardBackgroundColor="@color/weather_cool">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="@dimen/weather_spacing_large"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/cityNameTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/city_name"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/weather_text_primary"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/currentWeatherIconImageView"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/weather_spacing_small"
+                        android:scaleType="centerInside"
+                        tools:src="@drawable/ic_cloudy" />
+
+                    <TextView
+                        android:id="@+id/currentTempTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="22°C"
+                        android:textColor="@color/white"
+                        android:textSize="48sp"
+                        android:textStyle="bold"
+                        tools:text="22°C" />
+
+                    <TextView
+                        android:id="@+id/currentConditionTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/weather_spacing_small"
+                        android:textColor="@color/weather_text_white"
+                        android:textSize="@dimen/weather_text_primary"
+                        tools:text="Облачно" />
+
+                    <TextView
+                        android:id="@+id/currentFeelsLikeTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/weather_spacing_small"
+                        android:textColor="@color/weather_text_white"
+                        android:textSize="@dimen/weather_text_secondary"
+                        tools:text="Ощущается как 25°C" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:id="@+id/loadingLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="@dimen/weather_spacing_xlarge"
+                android:visibility="visible">
+
+                <ProgressBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/weather_spacing_medium" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/loading_weather"
+                    android:textColor="@color/weather_text_secondary"
+                    android:textSize="@dimen/weather_text_primary" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/errorLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="@dimen/weather_spacing_xlarge"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/error_loading_weather"
+                    android:textColor="@color/weather_text_secondary"
+                    android:textSize="@dimen/weather_text_primary"
+                    android:gravity="center"
+                    android:layout_marginBottom="@dimen/weather_spacing_medium" />
+
+                <Button
+                    android:id="@+id/retryButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/retry"
+                    android:backgroundTint="@color/weather_cool" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/forecastContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/weather_spacing_medium"
+                    android:layout_marginTop="@dimen/weather_spacing_medium"
+                    android:layout_marginBottom="@dimen/weather_spacing_small"
+                    android:text="7-дневный прогноз"
+                    android:textColor="@color/weather_text_primary"
+                    android:textSize="@dimen/weather_text_primary"
+                    android:textStyle="bold" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/weatherRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="vertical"
+                    android:paddingBottom="@dimen/weather_spacing_large" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="button_size">80dp</dimen>
+    <dimen name="button_margin">8dp</dimen>
+    <dimen name="display_text_size">24sp</dimen>
+    <dimen name="result_text_size">18sp</dimen>
+    <dimen name="display_padding">16dp</dimen>
+    <dimen name="grid_margin">16dp</dimen>
+    
+    <dimen name="weather_spacing_small">8dp</dimen>
+    <dimen name="weather_spacing_medium">16dp</dimen>
+    <dimen name="weather_spacing_large">24dp</dimen>
+    <dimen name="weather_spacing_xlarge">32dp</dimen>
+    <dimen name="weather_card_corner_radius">12dp</dimen>
+    <dimen name="weather_card_elevation">4dp</dimen>
+    <dimen name="weather_text_primary">14sp</dimen>
+    <dimen name="weather_text_secondary">12sp</dimen>
+    <dimen name="weather_header_height">200dp</dimen>
+    
+    <dimen name="weather_card_height">80dp</dimen>
+    <dimen name="weather_card_margin">8dp</dimen>
+    <dimen name="weather_card_padding">16dp</dimen>
+    <dimen name="weather_icon_large">60dp</dimen>
+    <dimen name="weather_text_caption">12sp</dimen>
+    <dimen name="weather_temperature_large">24sp</dimen>
+    <dimen name="weather_temperature_small">12sp</dimen>
+</resources>
