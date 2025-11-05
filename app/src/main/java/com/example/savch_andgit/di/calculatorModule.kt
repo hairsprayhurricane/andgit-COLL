@@ -10,8 +10,16 @@ import com.example.savch_andgit.weather.data.service.WeatherService
 import com.example.savch_andgit.weather.domain.repository.WeatherRepository
 import com.example.savch_andgit.weather.domain.use_case.GetWeatherUseCase
 import com.example.savch_andgit.weather.presentation.viewmodel.WeatherViewModel
+import com.example.savch_andgit.auth.data.local.AppDatabase
+import com.example.savch_andgit.auth.data.repository.AuthRepositoryImpl
+import com.example.savch_andgit.auth.domain.repository.AuthRepository
+import com.example.savch_andgit.auth.domain.usecase.AuthenticateUserUseCase
+import com.example.savch_andgit.auth.domain.usecase.RegisterUserUseCase
+import com.example.savch_andgit.auth.presentation.viewmodel.AuthViewModel
+import org.koin.android.ext.koin.androidContext
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
+import androidx.room.Room
 
 val calculatorModule = module {
     
@@ -35,4 +43,13 @@ val weatherModule = module {
     viewModel { WeatherViewModel(get()) }
 }
 
-val appModule = listOf(calculatorModule, weatherModule)
+val authModule = module {
+    single { Room.databaseBuilder(androidContext(), AppDatabase::class.java, "app.db").build() }
+    single { get<AppDatabase>().userDao() }
+    single<AuthRepository> { AuthRepositoryImpl(get()) }
+    single { RegisterUserUseCase(get()) }
+    single { AuthenticateUserUseCase(get()) }
+    viewModel { AuthViewModel(get(), get()) }
+}
+
+val appModule = listOf(calculatorModule, weatherModule, authModule)

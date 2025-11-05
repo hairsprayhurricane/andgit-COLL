@@ -17,7 +17,7 @@ class CalculatorService {
                 
             CalculationResult(result)
         } catch (e: Exception) {
-            CalculationResult(null, e.message ?: "Calculation error FUCKER")
+            CalculationResult(null, e.message ?: "Calculation error")
         }
     }
 }

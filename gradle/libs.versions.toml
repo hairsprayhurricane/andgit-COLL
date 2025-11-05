@@ -12,6 +12,7 @@ composeBom = "2024.09.00"
 koin = "4.1.0"
 appcompat = "1.7.1"
 material = "1.13.0"
+navigationFragmentKtx = "2.9.5"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -36,6 +37,7 @@ koin-androidx-compose = { module = "io.insert-koin:koin-androidx-compose" }
 koin-androidx-viewmodel = { module = "io.insert-koin:koin-androidx-viewmodel" }
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+androidx-navigation-fragment-ktx = { group = "androidx.navigation", name = "navigation-fragment-ktx", version.ref = "navigationFragmentKtx" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
+    id("kotlin-kapt")
 }
 
 android {
@@ -55,11 +56,17 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.7.0")
     implementation("androidx.activity:activity-ktx:1.8.2")
     implementation("androidx.fragment:fragment-ktx:1.6.2")
+    implementation(libs.androidx.navigation.fragment.ktx)
+    implementation("androidx.navigation:navigation-ui-ktx:2.7.7")
+    implementation("androidx.navigation:navigation-runtime-ktx:2.7.7")
     
     implementation("io.insert-koin:koin-android:3.5.3")
     implementation("io.insert-koin:koin-androidx-compose:3.5.3")
     
     implementation("net.objecthunter:exp4j:0.4.8")
+    implementation("androidx.room:room-runtime:2.6.1")
+    implementation("androidx.room:room-ktx:2.6.1")
+    kapt("androidx.room:room-compiler:2.6.1")
     
     implementation("com.google.android.material:material:1.11.0")
     implementation("androidx.cardview:cardview:1.0.0")
@@ -74,4 +81,7 @@ dependencies {
     androidTestImplementation(libs.androidx.compose.ui.test.junit4)
     debugImplementation(libs.androidx.compose.ui.tooling)
     debugImplementation(libs.androidx.compose.ui.test.manifest)
+    // Compose Navigation not used in this project
+    implementation("androidx.room:room-testing:2.6.1")
+    kaptAndroidTest("androidx.room:room-compiler:2.6.1")
 }

@@ -38,4 +38,15 @@
     <string name="loading_weather">Загрузка погоды...</string>
     <string name="error_loading_weather">Ошибка загрузки погоды</string>
     <string name="retry">Повторить</string>
+    <string name="auth_title">Вход</string>
+    <string name="register_title">Регистрация</string>
+    <string name="list_title">Список</string>
+    <string name="login">Логин</string>
+    <string name="password">Пароль</string>
+    <string name="go_register">Зарегистрироваться</string>
+    <string name="register">Регистрация</string>
+    <string name="auth_failed">Неверные учетные данные</string>
+    <string name="register_failed">Ошибка регистрации</string>
+    <string name="fields_empty">Заполните логин и пароль</string>
+    <string name="user_exists">Пользователь с таким логином уже существует</string>
 </resources>

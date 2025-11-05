@@ -13,26 +13,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Savch_andgit">
         <activity
-            android:name=".MainActivity"
+            android:name=".RootActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.Savch_andgit">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".calculator.presentation.ui.CalculatorActivity"
-            android:exported="false"
-            android:label="@string/calculator_title"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-        <activity
-            android:name=".weather.presentation.ui.WeatherActivity"
-            android:exported="false"
-            android:label="@string/weather_title"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
     </application>
-
 </manifest>

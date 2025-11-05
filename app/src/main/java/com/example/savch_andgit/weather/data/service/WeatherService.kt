@@ -22,7 +22,7 @@ class WeatherService {
             precipitation = 0.0
         )
         
-        val forecast = listOf(
+        val base = listOf(
             ForecastDay("Сегодня", "20 окт", "Облачно", 22.0, 15.0, R.drawable.ic_cloudy),
             ForecastDay("Завтра", "21 окт", "Солнечно", 25.0, 18.0, R.drawable.ic_sunny),
             ForecastDay("Среда", "22 окт", "Дождь", 18.0, 12.0, R.drawable.ic_rainy),
@@ -31,6 +31,7 @@ class WeatherService {
             ForecastDay("Суббота", "25 окт", "Облачно", 21.0, 13.0, R.drawable.ic_cloudy),
             ForecastDay("Воскресенье", "26 окт", "Дождь", 19.0, 11.0, R.drawable.ic_rainy)
         )
+        val forecast = (base + base.map { it.copy() } + base.map { it.copy() })
         
         return WeatherForecast(currentWeather, forecast)
     }
