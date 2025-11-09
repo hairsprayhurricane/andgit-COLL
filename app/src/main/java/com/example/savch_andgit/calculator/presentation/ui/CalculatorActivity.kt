@@ -10,6 +10,7 @@ import com.example.savch_andgit.R
 import com.example.savch_andgit.calculator.presentation.viewmodel.CalculatorViewModel
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
+// TODO: Legacy активити. Логика вынесена во фрагмент и навигацию. Удалить после стабилизации.
 class CalculatorActivity : AppCompatActivity() {
     
     private val viewModel: CalculatorViewModel by viewModel()

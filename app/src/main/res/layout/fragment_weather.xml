@@ -9,7 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="16dp">
+        android:padding="@dimen/weather_spacing_medium">
 
         <LinearLayout
             android:id="@+id/loadingLayout"
@@ -52,7 +52,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textStyle="bold"
-                android:textSize="18sp"/>
+                android:textSize="@dimen/weather_text_title"/>
 
             <TextView
                 android:id="@+id/currentTempTextView"
@@ -71,8 +71,8 @@
 
             <ImageView
                 android:id="@+id/currentWeatherIconImageView"
-                android:layout_width="48dp"
-                android:layout_height="48dp"/>
+                android:layout_width="@dimen/weather_icon_medium"
+                android:layout_height="@dimen/weather_icon_medium"/>
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/weatherRecyclerView"

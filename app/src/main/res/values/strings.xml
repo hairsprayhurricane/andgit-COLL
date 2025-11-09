@@ -49,4 +49,6 @@
     <string name="register_failed">Ошибка регистрации</string>
     <string name="fields_empty">Заполните логин и пароль</string>
     <string name="user_exists">Пользователь с таким логином уже существует</string>
+    <string name="current_temp_format">%1$d°C</string>
+    <string name="feels_like_format">Ощущается как %1$d°C</string>
 </resources>

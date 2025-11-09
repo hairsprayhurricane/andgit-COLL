@@ -7,7 +7,7 @@ import android.app.Activity
 import com.example.savch_andgit.calculator.presentation.ui.CalculatorActivity
 import com.example.savch_andgit.weather.presentation.ui.WeatherActivity
 
-// Я тут решаю какие активити будут какие нет путь он лежит в проекте до тех пор пока я не решу проблему с jpegом кокоса
+// TODO: Временная активити для навигации/отладки. Удалить в следующих коммитах после решения проблемы с JPEG кокоса.
 class MainActivity : Activity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

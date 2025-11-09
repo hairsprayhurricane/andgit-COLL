@@ -14,6 +14,7 @@ import com.example.savch_andgit.weather.presentation.adapter.WeatherForecastAdap
 import com.example.savch_andgit.weather.presentation.viewmodel.WeatherViewModel
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
+// TODO: Legacy активити. Переведено на фрагменты (nav_graph). Удалить после стабилизации UI.
 class WeatherActivity : AppCompatActivity() {
     
     private val viewModel: WeatherViewModel by viewModel()
@@ -96,9 +97,9 @@ class WeatherActivity : AppCompatActivity() {
     private fun updateWeatherDisplay(weatherForecast: com.example.savch_andgit.weather.domain.model.WeatherForecast) {
         val weather = weatherForecast.currentWeather
         cityNameTextView.text = weather.cityName
-        currentTempTextView.text = "${weather.currentTemp.toInt()}°C"
+        currentTempTextView.text = getString(R.string.current_temp_format, weather.currentTemp.toInt())
         currentConditionTextView.text = weather.condition
-        currentFeelsLikeTextView.text = "Ощущается как ${weather.feelsLike.toInt()}°C"
+        currentFeelsLikeTextView.text = getString(R.string.feels_like_format, weather.feelsLike.toInt())
         currentWeatherIconImageView.setImageResource(getWeatherIcon(weather.condition))
         
         forecastAdapter = WeatherForecastAdapter(weatherForecast.forecast)

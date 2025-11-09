@@ -24,4 +24,6 @@
     <dimen name="weather_text_caption">12sp</dimen>
     <dimen name="weather_temperature_large">24sp</dimen>
     <dimen name="weather_temperature_small">12sp</dimen>
+    <dimen name="weather_text_title">18sp</dimen>
+    <dimen name="weather_icon_medium">48dp</dimen>
 </resources>
