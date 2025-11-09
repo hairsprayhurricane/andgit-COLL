@@ -51,4 +51,14 @@
     <string name="user_exists">Пользователь с таким логином уже существует</string>
     <string name="current_temp_format">%1$d°C</string>
     <string name="feels_like_format">Ощущается как %1$d°C</string>
+    <string name="music_title">Музыка</string>
+    <string name="music_search_hint">Введите название трека</string>
+    <string name="search">Искать</string>
+    <string name="add_favorite">В избранное</string>
+    <string name="remove_favorite">Убрать из избранного</string>
+    <string name="music_loading">Идёт поиск…</string>
+    <string name="favorites">Избранное</string>
+    <string name="open_favorites">Открыть избранное</string>
+    <string name="favorites_title">Избранные треки</string>
+    <string name="empty_favorites">В избранном пока пусто</string>
 </resources>
