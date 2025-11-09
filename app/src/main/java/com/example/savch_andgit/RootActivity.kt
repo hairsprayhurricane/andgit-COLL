@@ -15,7 +15,7 @@ class RootActivity : AppCompatActivity() {
         val toolbar = findViewById<MaterialToolbar>(R.id.toolbar)
         val navHost = supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
         val navController = navHost.navController
-        val appBarConfiguration = AppBarConfiguration(setOf(R.id.weatherFragment, R.id.calculatorFragment, R.id.listFragment))
+        val appBarConfiguration = AppBarConfiguration(setOf(R.id.weatherFragment, R.id.calculatorFragment, R.id.listFragment, R.id.musicFragment))
         NavigationUI.setupWithNavController(toolbar, navController, appBarConfiguration)
         val bottom = findViewById<BottomNavigationView>(R.id.bottomNav)
         NavigationUI.setupWithNavController(bottom, navController)
